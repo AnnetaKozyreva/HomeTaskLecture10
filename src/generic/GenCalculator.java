@@ -10,20 +10,20 @@ class GenCalculator <T, V, A extends Number> {
         valueTwo = two;
         valueThree = three;
     }
-    T getValueOne(){
+    T getValueOne(T valueOne){
         return valueOne;
     }
-    V getValueTwo(){
+    V getValueTwo(V valueTwo){
         return valueTwo;
     }
-    A getValueThree(){
+    A getValueThree(A valueThree){
         return valueThree;
     }
 
     public <T, V, A extends Number> double sum (){
-        Double v1 = Double.parseDouble(getValueOne().toString());
-        Double v2 = Double.parseDouble(getValueTwo().toString());
-        Double v3 = Double.parseDouble(getValueThree().toString());
+        Double v1 = Double.parseDouble(getValueOne(valueOne).toString());
+        Double v2 = Double.parseDouble(getValueTwo(valueTwo).toString());
+        Double v3 = Double.parseDouble(getValueThree(valueThree).toString());
 
         return v1 + v2 + v3;
     }
